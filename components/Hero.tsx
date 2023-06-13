@@ -4,32 +4,32 @@ import Image from "next/image";
 
 
 export default function Hero() {
-    
+
     const handleScroll = () => {
-      
+
     }
-    return <div class={"hero"}>
-        <div class={"flex-1 pt-36 padding-x"}>
-            <h1 class={"hero__title"}>
+    return <div className={"hero"}>
+        <div className={"flex-1 pt-36 padding-x"}>
+            <h1 className={"hero__title"}>
                 Unleash Your Journey with Our Premier Car Showcase!
             </h1>
-            <p class={"hero__subtitle"}>
+            <p className={"hero__subtitle"}>
                 Elevate your journey. Discover, book, and embark on unforgettable adventures with our premier car
                 showcase.
             </p>
-            <CustomButton
+            <CustomButton btnType={"button"}
              title={"Explore Cars"}
              containerStyles={"bg-primary-blue text-white rounded-full mt-10"}
              handleClick={handleScroll}
             />
         </div>
-        <div class={"hero__image-container"}>
-            <div class={"hero__image"}>
+        <div className={"hero__image-container"}>
+            <div className={"hero__image"}>
                 <Image src={"/hero.png"} alt={"hero"}
                 fill className={"object-contain"}
                 />
-                <div class={"hero__image-overlay"}/>
             </div>
+            <div className={"hero__image-overlay"}/>
         </div>
     </div>
 }
