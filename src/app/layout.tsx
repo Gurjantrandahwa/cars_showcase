@@ -5,6 +5,7 @@ import {Footer, Navbar} from "../../components";
 export const metadata = {
   title: 'Cars Showcase',
   description: 'Discover, book, and embark on unforgettable adventures with our premier car showcase.',
+    image:"/car-logo-svg"
 }
 
 export default function RootLayout({
