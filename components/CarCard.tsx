@@ -1,6 +1,6 @@
 "use client"
 import {CarProps} from "../types";
-import {calculateCarRent} from "../utills";
+import {calculateCarRent, generateCarImageUrl} from "../utills";
 import Image from "next/image";
 import CustomButton from "./CustomButton";
 import {useState} from "react";
@@ -32,7 +32,7 @@ export default function CarCard({car}: CarCardProps) {
         </p>
 
         <div className={"relative w-full h-40 my-3 object-contain"}>
-            <Image src={"/hero.png"} alt={"cars"} fill priority className={"object-contain"}/>
+            <Image src={generateCarImageUrl(car)} alt={"cars"} fill priority className={"object-contain"}/>
         </div>
 
         <div className={"relative flex w-full mt-2"}>
@@ -66,6 +66,6 @@ export default function CarCard({car}: CarCardProps) {
                 />
             </div>
         </div>
-       <CarDetails isOpen={isOpen} closeModel={()=>setIsOpen(false)} car={car}/>
+       <CarDetails isOpen={isOpen} closeModal={()=>setIsOpen(false)} car={car}/>
     </div>
 }

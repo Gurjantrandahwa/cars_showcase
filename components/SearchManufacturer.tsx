@@ -4,7 +4,7 @@ import {Combobox, Transition} from '@headlessui/react'
 import Image from "next/image";
 import {Fragment, useState} from "react";
 import {manufacturers} from "../constants";
-import it from "node:test";
+
 
 
 export default function SearchManufacturer({setManufacturer, manufacturer}: SearchManufacturerProps) {
