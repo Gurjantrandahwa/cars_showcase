@@ -3,23 +3,23 @@ import {Footer, Navbar} from "../../components";
 
 
 export const metadata = {
-  title: 'Cars Showcase',
-  description: 'Discover, book, and embark on unforgettable adventures with our premier car showcase.',
-    image:"/car-logo-svg"
+    title: 'Cars Showcase',
+    description: 'Discover, book, and embark on unforgettable adventures with our premier car showcase.',
+
 }
 
 export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
+                                       children,
+                                   }: {
+    children: React.ReactNode
 }) {
-  return (
-    <html lang="en">
-      <body className={"relative"}>
-      <Navbar/>
-      {children}
-      <Footer/>
-      </body>
-    </html>
-  )
+    return (
+        <html lang="en">
+        <body className={"relative"}>
+        <Navbar/>
+        {children}
+        <Footer/>
+        </body>
+        </html>
+    )
 }
