@@ -12,7 +12,7 @@ export default function Footer() {
                        className={"object-contain"}
                 />
                 <p className={"text-base text-gray-700"}>
-                    CarShowcase 2023 <br/>
+                    CarShowcase {new Date().getFullYear()} <br/>
                     All rights reserved &copy;
                 </p>
             </div>

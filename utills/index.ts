@@ -29,6 +29,7 @@ export const generateCarImageUrl = (car: CarProps, angle?: string) => {
     url.searchParams.append("angle", `${angle}`)
     return `${url}`
 }
+
 export const calculateCarRent = (city_mpg: number, year: number) => {
     const basePricePerDay = 695; // Base rental price per day in dollars
     const mileageFactor = 0.1; // Additional rate per mile driven
@@ -43,3 +44,12 @@ export const calculateCarRent = (city_mpg: number, year: number) => {
 
     return rentalRatePerDay.toFixed(0);
 };
+
+export const updateSearchParams = (type: string, value: string) => {
+    const searchParams = new URLSearchParams(window.location.search);
+    searchParams.set(type, value)
+
+
+    const newPathName = `${window.location.pathname}?${searchParams.toString()}`
+    return newPathName;
+}
