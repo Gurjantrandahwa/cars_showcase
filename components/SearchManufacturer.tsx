@@ -7,7 +7,7 @@ import {manufacturers} from "../constants";
 
 
 
-export default function SearchManufacturer({setManufacturer, manufacturer}: SearchManufacturerProps) {
+export default function SearchManufacturer({selected, setSelected}: SearchManufacturerProps) {
     const [query, setQuery] = useState('')
     const filteredManufactures = query === "" ? manufacturers : manufacturers.filter((item) => (
         item.toLocaleLowerCase()
@@ -15,7 +15,7 @@ export default function SearchManufacturer({setManufacturer, manufacturer}: Sear
             .includes(query.toLocaleLowerCase().replace(/\s+/g, ""))
     ))
     return <div className={"search-manufacturer"}>
-        <Combobox value={manufacturer} onChange={setManufacturer}>
+        <Combobox value={selected} onChange={setSelected}>
             <div className={"relative w-full"}>
                 <Combobox.Button className={"absolute top-[14px]"}>
                     <Image
