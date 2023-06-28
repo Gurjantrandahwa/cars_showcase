@@ -1,7 +1,7 @@
 "use client";
 import {useEffect, useState} from "react";
 import {CarCard, CustomFilter, Hero, SearchBar, ShowMoreButton} from "../../components";
-import {fetchCars} from "../../utills";
+import {fetchCars} from "../../utils";
 import {fuels, yearsOfProduction} from "../../constants";
 import Image from "next/image";
 
@@ -40,6 +40,7 @@ export default function Home() {
     }
 
     useEffect(() => {
+        console.log(manufacturer, model, fuel, year, limit)
         getCars();
     }, [manufacturer, model, fuel, year, limit])
     // const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;

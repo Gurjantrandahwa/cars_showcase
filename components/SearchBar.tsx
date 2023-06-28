@@ -3,14 +3,14 @@
 import {SearchManufacturer} from "./index";
 import React, {useState} from "react";
 import Image from "next/image";
-import {useRouter} from "next/navigation";
+// import {useRouter} from "next/navigation";
 
 
 export default function SearchBar({setManufacturer, setModel}) {
     const [searchManufacturer, setSearchManufacturer] = useState('')
     const [searchModel, setSearchModel] = useState("");
 
-    const router = useRouter();
+    // const router = useRouter();
     const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (searchManufacturer === '' && searchModel === '') {
